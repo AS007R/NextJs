@@ -2,7 +2,7 @@ function button() {
     return (
         <div>
              <header>
-    <h1>Welcome to My Website</h1>
+    <h1 className="">Welcome to My Website</h1>
     <p>This is the home page of my website.</p>
   </header>
 
