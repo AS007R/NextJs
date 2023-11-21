@@ -40,38 +40,26 @@ const Navbar = () => {
               }
             >
               <div className="flex w-full items-center justify-end">
-                <div
-                  onClick={handleClick}
-                  className="cursor-pointer"
-                >
+                <div onClick={handleClick} className="cursor-pointer">
                   <AiOutlineClose size={25} />
                 </div>
               </div>
               <div className="flex flex-col items-center w-full py-10">
-              <Link href="#about" className="hover:font-bold py-2">
-              <div
-                  onClick={handleClick}
-                  className="cursor-pointer"
-                >
-                  <h1>About</h1>
-                </div>
-              </Link>
-              <Link href="#projects" className="hover:font-bold py-2">
-              <div
-                  onClick={handleClick}
-                  className="cursor-pointer"
-                >
-                  <h1>Projects</h1>
-                </div>
-              </Link>
-              <Link href="#contact" className="hover:font-bold py-2">
-              <div
-                  onClick={handleClick}
-                  className="cursor-pointer"
-                >
-                  <h1>Contact</h1>
-                </div>
-              </Link>
+                <Link href="#about" className="hover:font-bold py-2">
+                  <div onClick={handleClick} className="cursor-pointer">
+                    <h1>About</h1>
+                  </div>
+                </Link>
+                <Link href="#projects" className="hover:font-bold py-2">
+                  <div onClick={handleClick} className="cursor-pointer">
+                    <h1>Projects</h1>
+                  </div>
+                </Link>
+                <Link href="#contact" className="hover:font-bold py-2">
+                  <div onClick={handleClick} className="cursor-pointer">
+                    <h1>Contact</h1>
+                  </div>
+                </Link>
               </div>
             </div>
           </nav>
