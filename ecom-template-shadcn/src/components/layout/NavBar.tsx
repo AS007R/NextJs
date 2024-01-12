@@ -1,64 +1,30 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import { Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart, X } from "lucide-react";
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="bg-white">
-      <div className="mx-auto max-w-[1345px] px-2 sm:px-6 lg:px-8">
+      <div className=" mx-auto max-w-[1345px] px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className=" absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
+              className=" relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              onClick={() => setOpen(!open)}
             >
-              <span className="absolute -inset-0.5"></span>
-              <span className="sr-only">Open main menu</span>
-              {/* <!--
-            Icon when menu is closed.
+              {/* <!--Icon when menu is closed--> */}
+              {open ? <X /> : <Menu />}
 
-            Menu open: "hidden", Menu closed: "block"
-          --> */}
-              <svg
-                className="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-              {/* <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          --> */}
-              <svg
-                className="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              {/* <!--Icon when menu is open.--> */}
             </button>
           </div>
-          <div className="flex gap-7 items-center justify-center w-full sm:w-auto sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+          <div className="  flex gap-7 items-center justify-center w-full sm:w-auto sm:items-stretch sm:justify-start">
+            <div className=" flex flex-shrink-0 items-center">
               <Image
                 src="/logo.webp"
                 width={150}
@@ -108,7 +74,7 @@ const NavBar = () => {
               </button>
             </form>
           </div>
-          <div className="absolute w-auto inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className=" absolute w-auto inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
               className="relative rounded-full text-black p-2 bg-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -122,33 +88,39 @@ const NavBar = () => {
       </div>
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-      <div className="sm:hidden" id="mobile-menu">
+      <div
+        className={`sm:hidden absolute w-full text-black z-10 bg-[#ffffff] ${
+          !open
+            ? "-translate-x-[100%] ease-in duration-1000"
+            : "translate-x-0 ease-in duration-1000"
+        } `}
+      >
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
           <a
             href="#"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
-            Dashboard
+            Women
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Team
+            Men
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Projects
+            Children
           </a>
           <a
             href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
-            Calendar
+            All Products
           </a>
         </div>
       </div>

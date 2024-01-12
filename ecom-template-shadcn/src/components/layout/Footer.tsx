@@ -133,7 +133,7 @@ const Footer = () => {
             </p>
             <p>
               Code by.{" "}
-              <span className="font-bold text-lg"> AS00R on github</span>
+              <span className="font-bold text-lg"> AS007R on github</span>
             </p>
           </div>
         </div>

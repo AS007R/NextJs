@@ -4,16 +4,16 @@ import { ShoppingCart } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="Hero relative h-[85vh] ">
+    <section className="Hero relative py-14 lg:h-[85vh] ">
       <div className="ContentArea  m-auto h-full flex gap-10 items-center justify-center">
         <div className="flex-1 ">
           <span className="inline-flex items-center rounded-md bg-blue-50 px-5 py-2 text-base font-bold text-blue-700 ring-1 ring-inset ring-blue-700/10">
             Sale 70%
           </span>
-          <h1 className="scroll-m-20 text-4xl font-extrabold mt-7 tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-5xl font-bold mt-7 tracking-wider lg:text-5xl">
             An Industrial Take on Streetwear
           </h1>
-          <p className="leading-7 pr-10 [&:not(:first-child)]:mt-6">
+          <p className="leading-7 max-w-[400px] [&:not(:first-child)]:mt-6">
             Anyone can beat you but no one can beat your outfit as long as you
             wear Dine outfits.
           </p>
@@ -21,7 +21,7 @@ const Hero = () => {
             <ShoppingCart className="mr-2" />
             Start SHopping
           </Button>
-          <div className=" flex gap-5 mt-14">
+          <div className=" flex gap-8 mt-14">
             <Image
               src="/hl1.webp"
               width={100}
