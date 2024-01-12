@@ -1,12 +1,11 @@
-import DialogFlie from "@/components/dialogFlie";
+import Footer from "@/components/ecommComp/Footer";
+import NavBar from "@/components/ecommComp/NavBar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-6 p-24">
-      <div>Hello</div>
-      <div>
-        <DialogFlie />
-      </div>
-    </main>
+    <>
+      <NavBar />
+      <Footer />
+    </>
   );
 }
