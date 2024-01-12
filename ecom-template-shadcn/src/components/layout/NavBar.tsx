@@ -5,7 +5,7 @@ import { Search, ShoppingCart } from "lucide-react";
 const NavBar = () => {
   return (
     <nav className="bg-white">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1345px] px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
@@ -72,26 +72,26 @@ const NavBar = () => {
               {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
               <a
                 href="#"
-                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
                 aria-current="page"
               >
                 Men
               </a>
               <a
                 href="#"
-                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 Women
               </a>
               <a
                 href="#"
-                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 Childern
               </a>
               <a
                 href="#"
-                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 All Products
               </a>
@@ -111,7 +111,7 @@ const NavBar = () => {
           <div className="absolute w-auto inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full text-black p-2 bg-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-full text-black p-2 bg-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span className="absolute -inset-1.5"></span>
               <span className="sr-only">View notifications</span>

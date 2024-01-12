@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       {/* <!-- component --> */}
       <footer className="bg-white dark:bg-gray-900">
-        <div className="container px-4 max-w-7xl sm:px-6 lg:px-8 py-12 mx-auto">
+        <div className="container px-4 max-w-[1345px] sm:px-6 lg:px-8 py-12 mx-auto">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
             <div>
               <Image

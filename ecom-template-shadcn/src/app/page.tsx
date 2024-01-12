@@ -1,11 +1,9 @@
-import Footer from "@/components/ecommComp/Footer";
-import NavBar from "@/components/ecommComp/NavBar";
+import Hero from "@/views/Hero";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
-      <Footer />
+      <Hero />
     </>
   );
 }
