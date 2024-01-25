@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, Search, ShoppingCart, X } from "lucide-react";
+import Link from "next/link";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -36,31 +37,31 @@ const NavBar = () => {
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex md:space-x-3 space-x-1">
               {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-              <a
-                href="#"
+              <Link
+                href="/men"
                 className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
                 aria-current="page"
               >
                 Men
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/women"
                 className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 Women
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/child"
                 className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 Childern
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/products"
                 className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm lg:text-lg font-medium"
               >
                 All Products
-              </a>
+              </Link>
             </div>
           </div>
           <div className="lg:block hidden">
@@ -97,31 +98,31 @@ const NavBar = () => {
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          <a
+          <Link
             href="#"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Women
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Men
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Children
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             All Products
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
