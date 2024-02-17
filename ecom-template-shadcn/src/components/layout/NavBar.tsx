@@ -26,12 +26,14 @@ const NavBar = () => {
           </div>
           <div className="  flex gap-7 items-center justify-center w-full sm:w-auto sm:items-stretch sm:justify-start">
             <div className=" flex flex-shrink-0 items-center">
-              <Image
-                src="/logo.webp"
-                width={150}
-                height={90}
-                alt="Picture of the author"
-              />
+              <Link href="/">
+                <Image
+                  src="/Logo.webp"
+                  width={150}
+                  height={90}
+                  alt="Picture of the author"
+                />
+              </Link>
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:block">
@@ -69,7 +71,12 @@ const NavBar = () => {
               className=" flex item-center border-slate-400 border-2 rounded-lg px-1"
               action="action_page.php"
             >
-              <input type="text" placeholder="Search.." name="search" />
+              <input
+                type="text"
+                placeholder="Search..."
+                name="search"
+                className="focus:outline-none"
+              />
               <button type="submit">
                 <Search />
               </button>
@@ -99,26 +106,26 @@ const NavBar = () => {
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
           <Link
-            href="#"
+            href="/women"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Women
           </Link>
           <Link
-            href="#"
+            href="/men"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Men
           </Link>
           <Link
-            href="#"
+            href="/child"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Children
           </Link>
           <Link
-            href="#"
+            href="/products"
             className=" hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             All Products

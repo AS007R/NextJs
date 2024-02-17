@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -17,10 +18,12 @@ const Hero = () => {
             Anyone can beat you but no one can beat your outfit as long as you
             wear Dine outfits.
           </p>
-          <Button className="h-14 px-7 mt-7 rounded-none">
-            <ShoppingCart className="mr-2" />
-            Start SHopping
-          </Button>
+          <Link href="/products">
+            <Button className="h-14 px-7 mt-7 rounded-none">
+              <ShoppingCart className="mr-2" />
+              Start SHopping
+            </Button>
+          </Link>
           <div className=" flex gap-8 mt-14">
             <Image
               src="/hl1.webp"
@@ -51,11 +54,11 @@ const Hero = () => {
         <div className="flex-1 hidden lg:flex justify-center ">
           <div className="  bg-pink-100 w-[500px] h-[500px] rounded-full">
             <Image
-              src="/hero.webp"
+              src="/products/hero.webp"
               width={600}
               height={90}
               alt="Picture of the author"
-              className="absolute top-0 -translate-x-7"
+              className="img_show absolute top-0 -translate-x-7"
             />
           </div>
         </div>
